@@ -447,13 +447,16 @@ ul.row {
     background-color: var(--color-primary);
     width: 100%;
 }
+
 @media only screen and (max-width: 767px) {
     :root{
         --nav-item-margin:0;
     }
     .navbar-menu{
         flex: 1;
+        display: none;
     }
+
     .header .nav{
         flex-direction: column;
         overflow: hidden;
@@ -1059,8 +1062,9 @@ textarea:valid:not(:placeholder-shown) {
     margin: 0 1rem;
 }
 
-/* hamburger Menu  */
-.header.menu-icon{
+/* hamburger */
+
+.header .menu-icon {
     cursor: pointer;
     padding: 2.5rem;
     position: relative;
@@ -1074,6 +1078,13 @@ textarea:valid:not(:placeholder-shown) {
     position: relative;
     transition: background .2s ease-out;
 }
+.header .menu-icon .navicon::before{
+    top: .7rem;
+}
+.header .menu-icon .navicon::after{
+    top: -.7rem;
+}
+
 .header.menu-icon.navicon::before,.header.menu-icon.navicon::after{
     content: "";
     display: block;

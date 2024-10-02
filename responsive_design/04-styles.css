@@ -1,4 +1,3 @@
-
 /* SUMMARY
 1. GLOBAL
 2. LAYOUT
@@ -448,13 +447,16 @@ ul.row {
     background-color: var(--color-primary);
     width: 100%;
 }
+
 @media only screen and (max-width: 767px) {
     :root{
         --nav-item-margin:0;
     }
     .navbar-menu{
         flex: 1;
+        display: none;
     }
+
     .header .nav{
         flex-direction: column;
         overflow: hidden;
